@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ft_ping-pong</title>
+	<link rel="shortcut icon" href="space-wars.ico" />
+  <link rel="stylesheet" href="index.css" />
+	<script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+
+	<video autoplay muted loop preload="auto" id="background-video">
+	  <source src="background-video.mp4" type="video/mp4">
+	  Your browser does not support HTML5 video.
+	</video>
+
+	<audio id="background-music" src="music/solitary-march.mp3" preload="auto" loop muted>
+	</audio>
+
+	<audio id="menu-select-1" src="audio/menu-select-1.wav" preload="auto"></audio>
+
+	<audio id="menu-select-2" src="audio/menu-select-2.wav" preload="auto"></audio>
+
+	<audio id="menu-success" src="audio/menu-success.wav" preload="auto"></audio>
+
+	<audio id="menu-failure" src="audio/menu-failure.wav" preload="auto"></audio>
+
+	<audio id="menu-link" src="audio/menu-link.mp3" preload="auto"></audio>
+
+	<audio id="menu-mouseover" src="audio/menu-mouseover.wav" preload="auto"></audio>
+
+	<main>
+		<h1>ft_ping-pong</h1>
+
+		<nav>
+			<section>
+				<span class="con-login"></span>
+				<span class="login-line"></span>
+				<button id="login-button">Log In</button>
+				<span class="login-line"></span>
+				<span class="con-login"></span>
+			</section>
+
+			<div id="login">
+				<form>
+					<section>
+					<label for="user">Intra</label>
+					<input type="text" name="user" />
+					</section>
+					<section>
+					<label for="password">Password</label>
+					<input type="password" name="password" />
+					</section>
+					<section>
+					<input id="submit-login" class="submit-button" type="submit" value="Log In" />
+					</section>
+				</form>
+				<div id="login-error" class="error"></div>
+			</div>
+
+			<section>
+				<span class="con-credits"></span>
+				<span class="credits-line"></span>
+				<button id="credits-button">Club Info</button>
+				<span class="credits-line"></span>
+				<span class="con-credits"></span>
+			</section>
+
+			<div id="credits">
+				<ul>
+					<u>Weekly Meetups</u>
+					<li>Join us in the Multipurpose Room from 4 - 6 PM on Fridays afternoons for some fun ping pong games.</li>
+					<li>We'll play games like 'Run Around The Table', 'The Iron Throne' and many other ping pong games.</li>
+					<br>
+					<u>Monthly Tournament</u>
+					<li>On the first Firday of the month at 6 PM we will generate the first bracket for the tournament.</li>
+					<li>Remember to sign up for the tournament before that first bracket.</li>
+					<li>Once the tournament starts, every week you will have until Thursday Midnight to arrange a game with your opponent and update the results.</li>
+					<li>Every week, after all of the results are gathered, the next bracket will be genreated (including a losers section - "The Toilet Bowl").</li>
+					<li>If you did not manage to signup for the tournament on time feel free to contact us and we will insert you somehow into the losers section.</li>
+					<br>
+					<u>For more info contact:</u>
+					<li>Joseph Kaplin @jkaplin</li>
+					<li>2nd person @intraname</li>
+				</ul>
+			</div>
+		</nav>
+	</main>
+
+	<div id="line" class="mute"></div>
+	<canvas id="speaker"></canvas>
+
+	<script type="text/javascript">
+		drawSpeaker();
+		document.addEventListener("click", playClickSound);
+		document.addEventListener("mouseover", playHoverSound);
+		document.getElementById("speaker").addEventListener("click", toggleMusic);
+		document.getElementById("line").addEventListener("click", toggleMusic);
+		document.getElementById("speaker").addEventListener("mouseover", toggleLine);
+		document.getElementById("speaker").addEventListener("mouseleave", toggleLine);
+		document.getElementById("login-button").addEventListener("click", toggleModal);
+		document.getElementById("credits-button").addEventListener("click", toggleModal);
+		document.getElementById("submit-login").addEventListener("click", validateLogin);
+	</script>
+</body>
+
+</html>

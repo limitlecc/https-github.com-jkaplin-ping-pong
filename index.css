@@ -1,0 +1,242 @@
+* {
+	cursor: default;
+}
+
+u {
+	font-size: 1.5vw;
+	margin-bottom: 100px;
+}
+
+a {
+	color: blue;
+	cursor: alias;
+}
+
+button {
+	cursor: pointer;
+}
+
+body {
+	margin: 0;
+}
+
+#background-video {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	color: white;
+	font-size: 100px;
+	margin: 50px;
+}
+
+nav{
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	padding: 10px;
+}
+
+
+nav > section {
+	display: flex;
+	flex-direction: row;
+	opacity: 0.3;
+}
+
+nav button {
+	opacity: 0.6;
+	border-radius: 5px;
+	font-size: 2.5vw;
+	margin: 10px;
+	height: 10%;
+	font-weight: bold;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	color: white;
+}
+
+#login-button {
+	background-color: orange;
+}
+
+#credits-button {
+	background-color: green;
+}
+
+.login-line,
+.signup-line,
+.credits-line {
+	position: relative;
+	width: 10%;
+	height: 3px;
+	background-color: white;
+	opacity: 0.8;
+	top: 3vw;
+}
+
+.con-login,
+.con-signup {
+	position: relative;
+	width: 3px;
+	height: 7vw;
+	background-color: white;
+	opacity: 0.8;
+	top: 3vw;
+}
+
+.con-credits {
+	display: none;
+	position: relative;
+	width: 3px;
+	height: 6vw;
+	background-color: white;
+	opacity: 0.8;
+	top: 3vw;
+}
+
+#login, #signup, #credits {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	color: white;
+	font-weight: bold;
+	opacity: 0.8;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+
+#login {
+	background-color: orange;
+}
+
+#signup {
+	background-color: blue;
+}
+
+#credits {
+	font-family: monospace;
+	font-size: 1vw;
+	background-color: green;
+}
+
+#login, #signup {
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#login, #signup, #credits {
+	display: none;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 90%;
+	margin: 20px;
+	font-size: 2vw;
+	text-align: center;
+}
+
+form section {
+	position: relative;
+	margin: 5px;
+}
+
+form section > * {
+	margin: 1px;
+}
+
+form label {
+	text-decoration: underline;
+	display: block;
+}
+
+form input {
+	cursor: text;
+	font-size: 2vw;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.sign {
+	display: inline;
+	position: absolute;
+	margin-left: 5px;
+}
+
+.submit-button {
+	cursor: pointer;
+	border: 1px solid black;
+	font-size: 2vw;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.error {
+	color: red;
+}
+
+#welcome {
+	display: none;
+	width: 100%;
+	background-color: white;
+	opacity: 0.8;
+}
+
+#speaker {
+	cursor: pointer;
+	position: absolute;
+	bottom: 100px;
+	right: 100px;
+}
+
+#speaker:hover {
+	opacity: 0.9;
+}
+
+.mute-hover {
+	cursor: pointer;
+	width: 0px;
+	height: 130px;
+	border: 1px solid red;
+	background-color: red;
+	position: absolute;
+	transform: rotate(-45deg);
+	bottom: 80px;
+	right: 150px;
+	z-index: 0;
+	opacity: 0.2;
+}
+
+.mute {
+	cursor: pointer;
+	width: 0px;
+	height: 130px;
+	border: 2px solid red;
+	background-color: red;
+	position: absolute;
+	transform: rotate(-45deg);
+	bottom: 80px;
+	right: 150px;
+	z-index: 1;
+	opacity: 0.8;
+}
