@@ -8,9 +8,9 @@
 			-F code=$code \
 			-F redirect_uri=https://ft-ping-pong.herokuapp.com/oauth.php \
 			-X POST https://api.intra.42.fr/oauth/token",$arr);
-	print_r($arr);
+	var_dump($arr);
 	$access_token = $arr[0];
-	var_dump($access_token);
+	var_dump(json_decode($access_token));
 	exec("curl -H 'Authorization: Bearer $access_token' 'https://api.intra.42.fr/v2/me'", $out);
 	print_r($out);
 ?>
