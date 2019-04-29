@@ -14,5 +14,9 @@
 	$access_token = $obj->access_token;
 	var_dump($access_token);
 	exec("curl -H 'Authorization: Bearer $access_token' 'https://api.intra.42.fr/v2/me'", $out);
-	print_r($out);
+	$obj = json_decode($out[0]);
+	var_dump($obj->email);
+	var_dump($obj->login);
+	var_dump($obj->first_name);
+	var_dump($obj->last_name);
 ?>
