@@ -1,5 +1,6 @@
 <?php
-	echo $_GET["code"];
+
+	session_start();
 	$code = $_GET["code"];
 
 	exec("curl -F grant_type=authorization_code \
@@ -8,13 +9,11 @@
 			-F code=$code \
 			-F redirect_uri=https://ft-ping-pong.herokuapp.com/oauth.php \
 			-X POST https://api.intra.42.fr/oauth/token",$arr);
-	var_dump($arr);
 	$obj = json_decode($arr[0]);
-	var_dump($obj);
 	$access_token = $obj->access_token;
-	var_dump($access_token);
 	exec("curl -H 'Authorization: Bearer $access_token' 'https://api.intra.42.fr/v2/me'", $out);
 	$obj = json_decode($out[0]);
+	$_SESSION["user"] = $obj;
 	var_dump($obj->email);
 	var_dump($obj->login);
 	var_dump($obj->first_name);
