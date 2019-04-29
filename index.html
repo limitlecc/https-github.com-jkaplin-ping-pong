@@ -17,7 +17,6 @@
 	  Your browser does not support HTML5 video.
 	</video>
 
-	<audio id="background-music" src="music/solitary-march.mp3" preload="auto" loop muted>
 	</audio>
 
 	<audio id="menu-select-1" src="audio/menu-select-1.wav" preload="auto"></audio>
@@ -45,20 +44,8 @@
 			</section>
 
 			<div id="login">
-				<form>
-					<section>
-					<label for="user">Intra</label>
-					<input type="text" name="user" />
-					</section>
-					<section>
-					<label for="password">Password</label>
-					<input type="password" name="password" />
-					</section>
-					<section>
-					<input id="submit-login" class="submit-button" type="submit" value="Log In" />
-					</section>
-				</form>
-				<div id="login-error" class="error"></div>
+				<img src="42.png" alt="42" />
+				<img src="guest.jpg" alt="Guest" />
 			</div>
 
 			<section>
@@ -72,7 +59,7 @@
 			<div id="credits">
 				<ul>
 					<u>Weekly Meetups</u>
-					<li>Join us in the Multipurpose Room from 4 - 6 PM on Fridays afternoons for some fun ping pong games.</li>
+					<li>Join us in the Multipurpose Room from <span class="special">4 - 6 PM on Fridays</span> for some fun ping pong games.</li>
 					<li>We'll play games like 'Run Around The Table', 'The Iron Throne' and many other ping pong games.</li>
 					<br>
 					<u>Monthly Tournament</u>
@@ -103,7 +90,6 @@
 		document.getElementById("speaker").addEventListener("mouseleave", toggleLine);
 		document.getElementById("login-button").addEventListener("click", toggleModal);
 		document.getElementById("credits-button").addEventListener("click", toggleModal);
-		document.getElementById("submit-login").addEventListener("click", validateLogin);
 	</script>
 </body>
 
