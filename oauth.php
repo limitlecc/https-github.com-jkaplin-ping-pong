@@ -10,7 +10,7 @@
 			-X POST https://api.intra.42.fr/oauth/token",$arr);
 	print_r($arr);
 	$access_token = $arr[0];
-	var_dump($json_decode($arr[0]));
+	var_dump($access_token);
 	exec("curl -H 'Authorization: Bearer $access_token' 'https://api.intra.42.fr/v2/me'", $out);
 	print_r($out);
 ?>
