@@ -11,5 +11,5 @@
 	print_r($arr);
 	$access_token = $arr["access_token"];
 	exec("curl -H 'Authorization: Bearer $access_token' https://api.intra.42.fr/v2/me", $out);
-	print_r($arr);
+	print_r($out);
 ?>
