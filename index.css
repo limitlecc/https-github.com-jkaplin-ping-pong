@@ -140,11 +140,23 @@ nav button {
 }
 
 #login img {
-	width: 500px;
+	width: 300px;
 	height: auto;
 	justify-content: center;
 	margin: 20px;
 	border-radius: 20px;
+	margin: 50px;
+	cursor: default;
+}
+
+a {
+	cursor: default;
+}
+
+#login img:hover {
+	width: 330px;	
+	height: auto;
+	cursor: pointer;
 }
 
 #speaker {
