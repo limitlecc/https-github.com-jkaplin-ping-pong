@@ -19,7 +19,7 @@
 		$csv = array_map('str_getcsv', file('data.csv'));
 		for ($i = 1; $i < count($csv); $i++)
 		{
-			echo ($csv[$i][0];
+			echo $csv[$i][0];
 			if ($csv[$i][0] === $intra)
 			{
 				$op_intra = $csv[$i][2];
