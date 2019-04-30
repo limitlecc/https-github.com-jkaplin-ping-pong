@@ -50,6 +50,7 @@
 	<h1>
 		<?php
 			echo "Hi there $name";
+			var_dump($csv);
 		?>
 	</h1>
 	<div class="container">  
