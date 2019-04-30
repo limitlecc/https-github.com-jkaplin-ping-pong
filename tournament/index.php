@@ -7,19 +7,10 @@
 		$intra = $user->login;
 		$name = $user->displayname;
 		$img = $user->image_url;
-	}
-	else
-	{
-		$guest = true;
-		$intra = "GUEST";
-		$name = "GUEST";
-		$img = "guest.jpg";
-		$test = file('data.csv');
-		var_dump($test);
+
 		$csv = array_map('str_getcsv', file('data.csv'));
 		for ($i = 1; $i < count($csv); $i++)
 		{
-			echo $csv[$i][0];
 			if ($csv[$i][0] === $intra)
 			{
 				$op_intra = $csv[$i][2];
@@ -33,6 +24,14 @@
 				}
 			}
 		}
+	}
+	else
+	{
+		$guest = true;
+		$intra = "GUEST";
+		$name = "GUEST";
+		$img = "guest.jpg";
+		$done = 0;
 	}
 ?>
 
@@ -53,7 +52,6 @@
 	<h1>
 		<?php
 			echo "Hi there $name";
-			var_dump($csv);
 		?>
 	</h1>
 	<div class="container">  
