@@ -1,5 +1,5 @@
 function show_form(intra, done) {
-	if (intra !== "GUEST" && done)
+	if (intra !== "GUEST" && !done)
 	{
 		document.querySelector(".container").style.display = "block";
 	}
