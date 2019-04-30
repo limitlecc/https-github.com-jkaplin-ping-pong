@@ -14,7 +14,7 @@
 		$intra = "GUEST";
 		$name = "GUEST";
 		$img = "guest.jpg";
-		$csv = array_map('str_getcsv', file('data.csv'));
+		$csv = array_map('str_getcsv', file('tournament/data.csv'));
 		for ($i = 1; $i < count($csv); $i++)
 		{
 			if ($csv[$i][0] === $intra)
