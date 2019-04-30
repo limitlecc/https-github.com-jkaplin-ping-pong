@@ -34,6 +34,7 @@
 	<h1>
 		<?php
 			echo "Hi there $name";
+			var_dump($user);
 		?>
 	</h1>
 	<?php if (!$guest) { ?>
