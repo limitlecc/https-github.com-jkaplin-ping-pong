@@ -1,5 +1,36 @@
-#win {
-	border: 1px solid black;
+* {
+	cursor: default;
+}
+
+body {
+	background-color: #282A32;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	cursor: pointer;
+}
+
+h1 {
+	color: white;
+	font-size: 100px;
+	margin: 50px;
+}
+
+h2 {
+	align-self: start;
+	color: orange;
+	font-size: 50px;
+	margin: 50px;
+}
+
+iframe {
+	position: absolute;
+	bottom: 0;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);

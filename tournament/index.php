@@ -49,11 +49,14 @@
 </head>
 
 <body>
-	<h1>
+	<h1>ft_pingPong</h1>
+	<br>
+	<h2>
 		<?php
 			echo "Hi there $name";
 		?>
-	</h1>
+	</h2>
+	<iframe src="https://challonge.com/m5u4u1c4/module?&show_standings=1&multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 	<div class="container">  
 		<form id="form" action="" method="post">
 			<h3>Submit the Match Score</h3>
