@@ -14,9 +14,12 @@
 		$intra = "GUEST";
 		$name = "GUEST";
 		$img = "guest.jpg";
-		$csv = array_map('str_getcsv', file('tournament/data.csv'));
+		$test = file('data.csv');
+		var_dump($test);
+		$csv = array_map('str_getcsv', file('data.csv'));
 		for ($i = 1; $i < count($csv); $i++)
 		{
+			echo ($csv[$i][0];
 			if ($csv[$i][0] === $intra)
 			{
 				$op_intra = $csv[$i][2];
