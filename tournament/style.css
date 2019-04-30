@@ -25,6 +25,7 @@ body {
 }
 
 .container {
+	display: none;
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
@@ -88,4 +89,23 @@ fieldset {
 
 #form button[type="submit"]:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#form {
+	display: grid;
+	grid-template-columns: 40% 40%;
+}
+
+#form h3 {
+	grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#form h4 {
+	grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
