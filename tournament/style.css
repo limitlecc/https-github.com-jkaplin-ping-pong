@@ -65,49 +65,6 @@ h2 {
   text-rendering: optimizeLegibility;
 }
 
-body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-}
-
-.container {
-	display: none;
-  max-width: 400px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
-#form input[type="text"],
-#form input[type="number"],
-#form button[type="submit"] {
-  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
-}
-
-#form {
-  background: white;
-  padding: 25px;
-  margin: 150px 0;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-#form h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-#form h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-}
-
 fieldset {
   border: medium none !important;
   margin: 0 0 10px;
