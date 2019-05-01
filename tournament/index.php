@@ -110,7 +110,19 @@
 		<h1>Join the Tournament</h1>
 	<?php } ?>
 	<script>
-		document.onload = show_forms(<?php echo $guest; ?>, <?php echo $done; ?>, <?php echo $participant ?>);
+		document.onload = function() {
+			let guest = <?php echo $guest; ?>;
+			let done = <?php echo $done; ?>
+			let participant = <?php echo $participant ?>;
+			if (!guest && !participant)
+			{
+				document.getElementById("enter").style.display = "block";
+			}
+			if (!guest && done)
+			{
+				document.querySelector(".container").style.display = "block";
+			}
+		};
 		document.getElementById('enter').addEventListener('click', function() {
 			<?php
 				if (!$guest)
