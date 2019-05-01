@@ -9,6 +9,7 @@
 		$name = $user->displayname;
 		$img = $user->image_url;
 
+
 		$csv = array_map('str_getcsv', file('data.csv'));
 		for ($i = 1; $i < count($csv); $i++)
 		{
@@ -37,6 +38,12 @@
 		$name = "";
 		$img = "guest.jpg";
 		$done = 0;
+
+//delete
+	$intra = "jkaplin";
+	$name = "Joe";
+	$guest = 0;
+
 	}
 	$participants = getParticipants();
 	$participant = 0;
@@ -107,11 +114,12 @@
 		</form>
 	</div>
 	<script>
-
 		let guest = <?php echo $guest; ?>;
 		let done = <?php echo $done; ?>;
 		let participant = <?php echo $participant ?>;
-		console.log(guest + done + participant);
+
+	window.alert(guest);
+
 		if (!guest && !participant)
 		{
 			document.getElementById("enter").style.display = "block";

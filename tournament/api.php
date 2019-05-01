@@ -10,6 +10,9 @@ $tournament_id = 5931277;
 
 function addParticipant($intra, $img)
 {
+	$c = $GLOBALS['c'];
+	$tournament_id = $GLOBALS['tournament_id'];	
+
 	$params = array(
   	"participant[name]" => $intra,
   	"participant[icon]" => $img
