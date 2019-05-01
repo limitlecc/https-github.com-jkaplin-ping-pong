@@ -38,7 +38,6 @@
 		$op_score = $_POST["p2_score"];
 		updateMatchScore($intra_name, $score, $op_score);
 		unset ($_POST["submit"]);
-		header("refresh: 3");
 	}
 
 ?>
@@ -91,7 +90,7 @@
 		<button id="enter">Enter The Tournament</button>
 	</form>
 
-	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 	<div class="container">  
 		<form id="form" action="#" method="post">
 			<h3>Submit the Match Score</h3>
