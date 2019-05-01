@@ -10,7 +10,7 @@
 		$name = $user->displayname;
 		$img = $user->image_url;
 		$op_intra = getOpponent($intra);
-		if ($op_intra && !isset($_SESSION["open"]))
+		if ($op_intra)
 			$open = getMatch($intra);
 		else
 			$open = false;
@@ -35,7 +35,7 @@
 		$score = $_POST["p1_score"];
 		$op_score = $_POST["p2_score"];
 		updateMatchScore($intra_name, $score, $op_score);
-		sleep(5000);
+		sleep(5);
 	}
 
 ?>
@@ -134,10 +134,6 @@
 				if (!$guest && !$participant)
 					addParticipant($intra);
 			?>
-		});
-
-		document.getElementById('form').addEventListener('submit', function() {
-			document.querySelector(".container").style.display = "none";
 		});
 	</script>
 </body>
