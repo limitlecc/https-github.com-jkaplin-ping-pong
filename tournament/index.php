@@ -10,7 +10,7 @@
 		$name = $user->displayname;
 		$img = $user->image_url;
 		$op_intra = getOpponent($intra);
-		$done = isDone($intra);
+		$done = getMatch($intra);
 	}
 	else
 	{
