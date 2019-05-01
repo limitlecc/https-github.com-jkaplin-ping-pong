@@ -8,6 +8,31 @@ $c->verify_ssl = false;
 
 $tournament_id = 5931277;
 
+function addParticipant($intra, $img)
+{
+	$params = array(
+  	"participant[name]" => $intra,
+  	"participant[icon]" => $img
+	);
+	$participant = $c->createParticipant($tournament_id, $params);
+}
+
+function getParticipants()
+{
+	$c = $GLOBALS['c'];
+	$tournament_id = $GLOBALS['tournament_id'];	
+
+	$participants = $c->getParticipants($tournament_id);
+
+	$arr = [];
+
+	for ($i = 0; $i < count($participants->participant); $i++)
+	{
+		$arr[] = $participants->participant[$i]->name;
+	}
+	return ($arr);
+}
+
 function getParticipantId($intra)
 {
 	$c = $GLOBALS['c'];
@@ -107,7 +132,5 @@ function updateMatchScore($intra, $score, $op_score)
 	);
 	$match = $c->updateMatch($tournament_id, $match_id, $params);
 }
-
-updateMatchScore('test', 3, 11);
 
 ?>
