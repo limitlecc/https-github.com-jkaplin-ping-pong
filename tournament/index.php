@@ -10,7 +10,10 @@
 		$name = $user->displayname;
 		$img = $user->image_url;
 		$op_intra = getOpponent($intra);
-		$open = getMatch($intra);
+		if (isset($_SESSION["open"]) && $_SESSION["open"] === "close")
+			$open = 0;
+		else
+			$open = getMatch($intra);
 	}
 	else
 	{
@@ -124,6 +127,7 @@
 
 		document.getElementById('form').addEventListener('submit', function() {
 			document.querySelector(".container").style.display = "none";
+			<?php $_SESSION["open"] = "close"; ?>
 		});
 	</script>
 </body>
