@@ -76,13 +76,13 @@
 		</div>
 	</div>
 
-	<form action="http://ft-ping-pong.herokuapp.com/tournament/submit.php" method="post">
+	<form action="http://ft-ping-pong.herokuapp.com/tournament/" method="post">
 		<button id="enter">Enter The Tournament</button>
 	</form>
 
 	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 	<div class="container">  
-		<form id="form" action="#" method="post">
+		<form id="form" action="http://ft-ping-pong.herokuapp.com/tournament/submit.php" method="post">
 			<h3>Submit the Match Score</h3>
 			<fieldset>
 				<input name="p1" value="<?php echo $intra;?>" type="text" required autofocus readonly>
