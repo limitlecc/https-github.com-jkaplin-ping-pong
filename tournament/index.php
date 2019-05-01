@@ -118,8 +118,10 @@
 		document.getElementById('enter').addEventListener('click', function() {
 			<?php
 				if (!$guest && !$participant)
-					addParticipant($intra, $img);
-			?>
+				{
+					addParticipant($intra, $img); ?>
+					document.querySelector(".container").style.display = "none";
+	<?php } ?>
 		});
 	</script>
 </body>
