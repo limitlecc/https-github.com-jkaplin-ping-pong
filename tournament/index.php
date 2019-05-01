@@ -35,6 +35,7 @@
 		$score = $_POST["p1_score"];
 		$op_score = $_POST["p2_score"];
 		updateMatchScore($intra_name, $score, $op_score);
+		sleep(5000);
 	}
 
 ?>
@@ -133,6 +134,10 @@
 				if (!$guest && !$participant)
 					addParticipant($intra);
 			?>
+		});
+
+		document.getElementById('form').addEventListener('submit', function() {
+			document.querySelector(".container").style.display = "none";
 		});
 	</script>
 </body>
