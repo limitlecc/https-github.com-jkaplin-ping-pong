@@ -27,17 +27,13 @@
 	$participants = getParticipants();
 	$participant = 0;
 
-
-	
-	if (isset($_POST["submit"]) && $_POST["submit"] === "OK")
+	if (isset($_POST["submit"]))
 	{
-		$intra_name = $_POST["p1"];
+		$intra_name = document.getElementById('p1').value;
 		$score = $_POST["p1_score"];
 		$op_score = $_POST["p2_score"];
 		updateMatchScore($intra_name, $score, $op_score);
-		sleep(5);
 	}
-
 ?>
 
 
@@ -90,7 +86,7 @@
 
 <!--	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
 	<div class="container">  
-		<form id="form" action="http://ft-ping-pong.herokuapp.com/tournament/" method="post">
+		<form id="form" action="#">
 			<h3>Submit the Match Score</h3>
 			<fieldset>
 				<input name="p1" value="<?php echo $intra;?>" type="text" required autofocus readonly>
@@ -135,6 +131,10 @@
 					addParticipant($intra);
 			?>
 		});
+
+		document.getElementById('form').addEventListener('submit', function() {
+			document.querySelector(".container").style.display = "none";
+		}
 	</script>
 </body>
 
