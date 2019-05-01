@@ -120,8 +120,6 @@
 		let done = <?php echo $done; ?>;
 		let participant = <?php echo $participant ?>;
 
-	window.alert(guest);
-
 		if (!guest && !participant)
 		{
 			document.getElementById("enter").style.display = "block";
