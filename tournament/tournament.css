@@ -93,8 +93,7 @@ body {
 }
 
 .container {
-	display: none;
-  max-width: 400px;
+  max-width: 750px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -115,9 +114,9 @@ body {
 
 #form h3 {
   display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 #form h4 {
@@ -142,6 +141,7 @@ fieldset {
   background: white;
   margin: 0 0 5px;
   padding: 10px;
+  font-size: 30px;
 }
 
 #form button[type="submit"] {
@@ -152,7 +152,7 @@ fieldset {
   color: white;
   margin: 0 0 5px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 30px;
 }
 
 #form button[type="submit"]:active {
