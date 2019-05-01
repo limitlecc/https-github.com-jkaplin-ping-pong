@@ -134,11 +134,6 @@
 					addParticipant($intra);
 			?>
 		});
-
-		document.getElementById('form').addEventListener('submit', function() {
-			document.querySelector(".container").style.display = "none";
-			<?php $_SESSION["open"] = "close"; ?>
-		});
 	</script>
 </body>
 
