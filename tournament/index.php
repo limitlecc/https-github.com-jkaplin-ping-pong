@@ -51,7 +51,7 @@
   <meta charset="utf-8">
   <title>ft_ping-pong</title>
 	<link rel="shortcut icon" href="ping-pong.ico" />
-  <link rel="stylesheet" href="tournament/style.css" />
+  <link rel="stylesheet" href="style.css" />
 	<script type="text/javascript" src="script.js"></script>
 </head>
 
@@ -84,7 +84,7 @@
 
 	<button id="enter">Enter The Tournament</button>
 
-	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<!--	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
 	<div class="container">  
 		<form id="form" action="#" method="post">
 			<h3>Submit the Match Score</h3>
