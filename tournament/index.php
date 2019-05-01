@@ -37,6 +37,7 @@
 		$score = $_POST["p1_score"];
 		$op_score = $_POST["p2_score"];
 		updateMatchScore($intra_name, $score, $op_score);
+		unset($_POST["submit"]);
 	}
 
 ?>
