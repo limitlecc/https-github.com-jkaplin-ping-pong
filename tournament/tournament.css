@@ -173,7 +173,6 @@ fieldset {
 }
 
 iframe {
-	display: none;
 	position: absolute;
 	bottom: 0;
 }
