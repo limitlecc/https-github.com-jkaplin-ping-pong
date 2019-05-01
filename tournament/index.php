@@ -89,7 +89,9 @@
 		<?php } ?>
 	</ol>
 
-	<button id="enter">Enter The Tournament</button>
+	<form action="http://ft-ping-pong.herokuapp.com/tournament/">
+		<button id="enter">Enter The Tournament</button>
+	</form>
 
 <!--	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
 	<div class="container">  
@@ -131,7 +133,7 @@
 
 		document.getElementById('enter').addEventListener('click', function() {
 			<?php
-				if (!$guest)
+				if (!$guest && !$participant)
 					addParticipant($intra, $img);
 			?>
 		});
