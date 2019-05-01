@@ -66,17 +66,6 @@ function getParticipantName($id)
 	return (NULL);
 }
 
-function createParticipant($intra)
-{
-	$c = $GLOBALS['c'];
-	$tournament_id = $GLOBALS['tournament_id'];	
-
-	$params = array(
-	  "participant[name]" => $intra,
-	  );
-	$participant = $c->createParticipant($tournament_id, $params);
-}
-
 function getMatch($intra)
 {
 	$c = $GLOBALS['c'];
@@ -94,6 +83,41 @@ function getMatch($intra)
 		if ($matches->match[$i]->state == "open" && (strval($matches->match[$i]->{"player1-id"}) == strval($id) || strval($matches->match[$i]->{"player2-id"}) == strval($id)))
 			return($matches->match[$i]->id);
 	}
+}
+
+function getOpponent($intra)
+{
+	$c = $GLOBALS['c'];
+	$tournament_id = $GLOBALS['tournament_id'];	
+
+	$id = getParticipantId($intra);
+
+	$match_id = getMatch($intra);
+	$match = $c->getMatch($tournament_id, $match_id);
+
+	$p1 = $match->{"player1-id"};
+	$p2 = $match->{"player2-id"};
+	if (strval($id) == strval($p1))
+	{
+		return (getParticipantName($p2));
+	}
+	else
+	{
+		return (getParticipantName($p1));
+	}
+}
+
+function isDone($intra)
+{
+	$c = $GLOBALS['c'];
+	$tournament_id = $GLOBALS['tournament_id'];	
+
+	$id = getParticipantId($intra);
+
+	$match_id = getMatch($intra);
+	$match = $c->getMatch($tournament_id, $match_id);
+
+	return $match->{"winner-id"};
 }
 
 function updateMatchScore($intra, $score, $op_score)

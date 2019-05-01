@@ -9,28 +9,8 @@
 		$intra = $user->login;
 		$name = $user->displayname;
 		$img = $user->image_url;
-
-
-		$csv = array_map('str_getcsv', file('data.csv'));
-		for ($i = 1; $i < count($csv); $i++)
-		{
-			if ($csv[$i][0] === $intra)
-			{
-				$op_intra = $csv[$i][2];
-				if ($csv[$i][4] === "1")
-				{
-					$done = 1;
-					break;
-				}
-				else
-				{
-					$done = 0;
-				}
-			}
-			else {
-				$done = 0;
-			}
-		}
+		$op_intra = getOpponent($intra);
+		$done = isDone($intra);
 	}
 	else
 	{
@@ -38,7 +18,7 @@
 		$intra = "";
 		$name = "";
 		$img = "guest.jpg";
-		$done = 0;
+		$done = 1;
 	}
 	$participants = getParticipants();
 	$participant = 0;
