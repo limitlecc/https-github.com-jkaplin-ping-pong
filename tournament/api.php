@@ -107,19 +107,6 @@ function getOpponent($intra)
 	}
 }
 
-function isDone($intra)
-{
-	$c = $GLOBALS['c'];
-	$tournament_id = $GLOBALS['tournament_id'];	
-
-	$id = getParticipantId($intra);
-
-	$match_id = getMatch($intra);
-	$match = $c->getMatch($tournament_id, $match_id);
-
-	return $match->{"winner-id"};
-}
-
 function updateMatchScore($intra, $score, $op_score)
 {
 	$c = $GLOBALS['c'];
