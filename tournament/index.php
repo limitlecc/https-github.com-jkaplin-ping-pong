@@ -93,7 +93,7 @@
 
 <!--	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
 	<div class="container">  
-		<form id="form" action="#" method="post">
+		<form id="form" action="http://ft-ping-pong.herokuapp.com/tournament/" method="post">
 			<h3>Submit the Match Score</h3>
 			<h4>Each player has to submit one form</h4>
 			<fieldset>
