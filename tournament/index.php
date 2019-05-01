@@ -84,7 +84,7 @@
 
 	<button id="enter">Enter The Tournament</button>
 
-<!--	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
+	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 	<div class="container">  
 		<form id="form" action="#" method="post">
 			<h3>Submit the Match Score</h3>
@@ -106,9 +106,6 @@
 			</fieldset>
 		</form>
 	</div>
-	<?php if (!$guest) { ?>
-		<h1>Join the Tournament</h1>
-	<?php } ?>
 	<script>
 		document.onload = function() {
 			let guest = <?php echo $guest; ?>;
