@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include("api.php");
+	include_once("api.php");
 
 	if (isset($_SESSION["user"]))
 	{
@@ -25,6 +25,8 @@
 		$op_intra = "jkaplin";
 	}
 	$participants = getParticipants();
+	$names = getNames();
+	$images = getImages();
 	$participant = 0;
 
 
@@ -47,9 +49,8 @@
 <head>
   <meta charset="utf-8">
   <title>ft_ping-pong</title>
-	<link rel="shortcut icon" href="ping-pong.ico" />
+  <link href="https://assets.challonge.com/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
   <link rel="stylesheet" href="tournament.css" />
-	<script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
@@ -66,18 +67,24 @@
 		?>
 	</h2>
 
-	<ol id="participants">
+	<div id="participants">
+	<div id="number"></div>
 		<u>Tournament Participants</u>
-		<?php for($i = 0; $i < count($participants); $i++) { ?>
-			<li>
-				<?php echo $participants[$i]; ?>
-				<?php
-					if ($participants[$i] == $intra)
-						$participant = 1;
-				?>
-			</li>
-		<?php } ?>
-	</ol>
+		<br>
+		<div id="count">
+			<?php for($i = 0; $i < count($participants); $i++) { ?>
+				<div>
+					<br>
+					<?php echo "$participants[$i] ($names[$i])"; ?>
+					<img src="<?php echo $images[$i]; ?>" />
+					<?php
+						if ($participants[$i] == $intra)
+							$participant = 1;
+					?>
+				</div>
+			<?php } ?>
+		</div>
+	</div>
 
 	<form action="http://ft-ping-pong.herokuapp.com/tournament/" method="post">
 		<button id="enter">Enter The Tournament</button>
@@ -105,23 +112,30 @@
 		</form>
 	</div>
 	<script>
-		let guest = <?php echo $guest; ?>;
-		let open = '<?php echo $open; ?>';
-		let participant = <?php echo $participant ?>;
+		function begin() {
+			let num = document.getElementById("count").children.length;
+			document.getElementById("number").innerHTML = num;
 
-		if (!guest && !participant)
-		{
-			document.getElementById("enter").style.display = "block";
-		}
-		if (!guest && open)
-		{
-			document.querySelector(".container").style.display = "block";
-		}
+			let guest = <?php echo $guest; ?>;
+			let open = '<?php echo $open; ?>';
+			let participant = <?php echo $participant ?>;
 
+			if (!guest && !participant)
+			{
+				document.getElementById("enter").style.display = "block";
+			}
+			if (!guest && open)
+			{
+				document.querySelector(".container").style.display = "block";
+			}
+		};
+
+
+		document.onload = begin();
 		document.getElementById('enter').addEventListener('click', function() {
 			<?php
 				if (!$guest && !$participant)
-					addParticipant($intra, $img);
+					addParticipant($intra, $name, $img);
 			?>
 		});
 

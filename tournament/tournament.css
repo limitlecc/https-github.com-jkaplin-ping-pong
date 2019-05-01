@@ -4,7 +4,6 @@
 
 body {
 	background-color: #282A32;
-	margin: 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -18,13 +17,18 @@ button {
 h1 {
 	color: white;
 	font-size: 100px;
+	margin: 50px;
 }
 
 h2 {
-	align-self: start;
 	color: orange;
 	font-size: 50px;
-	margin: 50px;
+	margin: 25px;
+	border: 1px solid orange;
+	padding: 100px;
+	border-radius: 10px;
+	width: 95%;
+	text-align: center;
 }
 
 #enter {
@@ -39,17 +43,31 @@ h2 {
 }
 
 #participants {
-	color: orange;
+	position: relative;
+	color: green;
 	font-style: monospace;
 	margin-top: 10px;
-	font-size: 20px;
+	font-size: 40px;
+	border: 1px solid green;
+	padding: 100px;
+	width: 95%;
+	text-align: center;
+	border-radius: 10px;
+	font-weight: bold;
 }
 
 #participants u {
-	color: white;
+	color: yellow;
 	font-size: 50px;
-	font-weight: bold;
-	margin-bottom: 15px;
+}
+
+#number {
+	font-weight: normal;
+	color: orange;
+	position: absolute;
+	border: 1px solid yellow;
+	padding: 20px;
+	border-radius: 100%;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);

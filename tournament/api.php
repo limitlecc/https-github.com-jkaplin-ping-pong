@@ -8,13 +8,14 @@ $c->verify_ssl = false;
 
 $tournament_id = 5931277;
 
-function addParticipant($intra, $img)
+function addParticipant($intra, $name, $img)
 {
 	$c = $GLOBALS['c'];
 	$tournament_id = $GLOBALS['tournament_id'];	
 
 	$params = array(
   	"participant[name]" => $intra,
+  	"participant[username]" => $name,
   	"participant[icon]" => $img
 	);
 	$participant = $c->createParticipant($tournament_id, $params);
@@ -32,6 +33,38 @@ function getParticipants()
 	for ($i = 0; $i < count($participants->participant); $i++)
 	{
 		$arr[] = $participants->participant[$i]->name;
+	}
+	return ($arr);
+}
+
+function getNames()
+{
+	$c = $GLOBALS['c'];
+	$tournament_id = $GLOBALS['tournament_id'];	
+
+	$participants = $c->getParticipants($tournament_id);
+
+	$arr = [];
+
+	for ($i = 0; $i < count($participants->participant); $i++)
+	{
+		$arr[] = $participants->participant[$i]->username;
+	}
+	return ($arr);
+}
+
+function getImages()
+{
+	$c = $GLOBALS['c'];
+	$tournament_id = $GLOBALS['tournament_id'];	
+
+	$participants = $c->getParticipants($tournament_id);
+
+	$arr = [];
+
+	for ($i = 0; $i < count($participants->participant); $i++)
+	{
+		$arr[] = $participants->participant[$i]->icon;
 	}
 	return ($arr);
 }

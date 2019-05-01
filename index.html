@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <title>ft_ping-pong</title>
-	<link rel="shortcut icon" href="space-wars.ico" />
+  <link href="https://assets.challonge.com/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
   <link rel="stylesheet" href="index.css" />
 	<script type="text/javascript" src="index.js"></script>
 </head>
@@ -36,11 +36,7 @@
 
 		<nav>
 			<section>
-				<span class="con-login"></span>
-				<span class="login-line"></span>
 				<button id="login-button">Log In</button>
-				<span class="login-line"></span>
-				<span class="con-login"></span>
 			</section>
 
 			<div id="login">
@@ -53,11 +49,7 @@
 			</div>
 
 			<section>
-				<span class="con-credits"></span>
-				<span class="credits-line"></span>
 				<button id="credits-button">Club Info</button>
-				<span class="credits-line"></span>
-				<span class="con-credits"></span>
 			</section>
 
 			<div id="credits">
@@ -85,7 +77,7 @@
 	<canvas id="speaker"></canvas>
 
 	<script type="text/javascript">
-		drawSpeaker();
+		document.onload = drawSpeaker();
 		document.addEventListener("click", playClickSound);
 		document.addEventListener("mouseover", playHoverSound);
 		document.getElementById("speaker").addEventListener("click", toggleMusic);
