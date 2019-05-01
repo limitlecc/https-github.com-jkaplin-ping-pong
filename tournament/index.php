@@ -11,7 +11,7 @@
 		$img = $user->image_url;
 		$op_intra = getOpponent($intra);
 		if ($op_intra)
-			$open = getMatch($intra);
+			$open = true;
 		else
 			$open = false;
 	}
@@ -27,13 +27,16 @@
 	$participants = getParticipants();
 	$participant = 0;
 
-	if (isset($_POST["submit"]))
+
+	
+	if (isset($_POST["submit"]) && $_POST["submit"] === "OK")
 	{
-		$intra_name = document.getElementById('p1').value;
+		$intra_name = $_POST["p1"];
 		$score = $_POST["p1_score"];
 		$op_score = $_POST["p2_score"];
 		updateMatchScore($intra_name, $score, $op_score);
 	}
+
 ?>
 
 
@@ -86,7 +89,7 @@
 
 <!--	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
 	<div class="container">  
-		<form id="form" action="#">
+		<form id="form" action="#" method="post">
 			<h3>Submit the Match Score</h3>
 			<fieldset>
 				<input name="p1" value="<?php echo $intra;?>" type="text" required autofocus readonly>
@@ -134,7 +137,7 @@
 
 		document.getElementById('form').addEventListener('submit', function() {
 			document.querySelector(".container").style.display = "none";
-		}
+		});
 	</script>
 </body>
 
