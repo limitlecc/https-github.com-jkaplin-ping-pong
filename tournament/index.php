@@ -51,7 +51,7 @@
   <meta charset="utf-8">
   <title>ft_ping-pong</title>
 	<link rel="shortcut icon" href="ping-pong.ico" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tournament/style.css" />
 	<script type="text/javascript" src="script.js"></script>
 </head>
 
