@@ -11,7 +11,7 @@
 		$img = $user->image_url;
 		$op_intra = getOpponent($intra);
 		if ($op_intra)
-			$open = true;
+			$open = getMatch($intra);
 		else
 			$open = false;
 	}
