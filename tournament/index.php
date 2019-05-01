@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	include("api.php");
+
 	if (isset($_SESSION["user"]))
 	{
 		$guest = 0;
@@ -38,15 +39,20 @@
 		$name = "";
 		$img = "guest.jpg";
 		$done = 0;
-
-//delete
-	$intra = "jkaplin";
-	$name = "Joe";
-	$guest = 0;
-
 	}
 	$participants = getParticipants();
 	$participant = 0;
+
+
+	
+	if (isset($_POST["submit"] && $_POST["submit"] === "OK"))
+	{
+		$intra_name = $_POST["p1"];
+		$score = $_POST["p1_score"];
+		$op_score = $_POST["p2_score"];
+		updateMatchScore($intra_name, $score, $op_score);
+	}
+
 ?>
 
 
@@ -89,7 +95,7 @@
 		<?php } ?>
 	</ol>
 
-	<form action="http://ft-ping-pong.herokuapp.com/tournament/">
+	<form action="http://ft-ping-pong.herokuapp.com/tournament/" method="post">
 		<button id="enter">Enter The Tournament</button>
 	</form>
 
@@ -111,7 +117,7 @@
 				<input name="p2_score" placeholder="Opponent Score" type="number" min="0" max="21" required>
 			</fieldset>
 			<fieldset>
-				<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+				<button name="submit" value="OK" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
 			</fieldset>
 		</form>
 	</div>
