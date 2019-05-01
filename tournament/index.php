@@ -112,7 +112,7 @@
 	<script>
 		document.onload = function() {
 			let guest = <?php echo $guest; ?>;
-			let done = <?php echo $done; ?>
+			let done = <?php echo $done; ?>;
 			let participant = <?php echo $participant ?>;
 			if (!guest && !participant)
 			{
