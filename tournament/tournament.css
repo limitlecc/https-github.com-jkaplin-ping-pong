@@ -41,13 +41,14 @@ h2 {
 #participants {
 	color: orange;
 	font-style: monospace;
-	margin-top: 30px;
+	margin-top: 10px;
 	font-size: 20px;
 }
 
 #participants u {
 	color: white;
-	font-size: 30px;
+	font-size: 50px;
+	font-weight: bold;
 	margin-bottom: 15px;
 }
 
