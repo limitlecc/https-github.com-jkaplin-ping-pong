@@ -1,4 +1,4 @@
-function show(guest, done, participant) {
+function show_forms(guest, done, participant) {
 	if (!guest && !participant)
 	{
 		document.getElementById("enter").style.display = "block";

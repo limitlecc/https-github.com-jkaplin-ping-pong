@@ -110,7 +110,7 @@
 		<h1>Join the Tournament</h1>
 	<?php } ?>
 	<script>
-		document.onload = show(<?php echo $guest; ?>, <?php echo $done; ?>, <?php echo $participant ?>);
+		document.onload = show_forms(<?php echo $guest; ?>, <?php echo $done; ?>, <?php echo $participant ?>);
 		document.getElementById('enter').addEventListener('click', function() {
 			<?php
 				if (!$guest)
