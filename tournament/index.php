@@ -45,7 +45,7 @@
 
 
 	
-	if (isset($_POST["submit"] && $_POST["submit"] === "OK"))
+	if (isset($_POST["submit"]) && $_POST["submit"] === "OK")
 	{
 		$intra_name = $_POST["p1"];
 		$score = $_POST["p1_score"];
