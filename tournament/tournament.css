@@ -46,7 +46,7 @@ h2 {
 	position: relative;
 	color: green;
 	font-style: monospace;
-	margin-top: 10px;
+	margin: 10px;
 	font-size: 40px;
 	border: 1px solid green;
 	padding: 100px;
@@ -173,7 +173,6 @@ fieldset {
 }
 
 iframe {
-	display: none;
 	position: absolute;
 	bottom: 0;
 }
