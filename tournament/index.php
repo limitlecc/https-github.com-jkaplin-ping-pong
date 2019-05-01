@@ -107,20 +107,20 @@
 		</form>
 	</div>
 	<script>
-		document.onload = function() {
-			let guest = <?php echo $guest; ?>;
-			let done = <?php echo $done; ?>;
-			let participant = <?php echo $participant ?>;
-			console.log(guest + done + participant);
-			if (!guest && !participant)
-			{
-				document.getElementById("enter").style.display = "block";
-			}
-			if (!guest && done)
-			{
-				document.querySelector(".container").style.display = "block";
-			}
-		};
+
+		let guest = <?php echo $guest; ?>;
+		let done = <?php echo $done; ?>;
+		let participant = <?php echo $participant ?>;
+		console.log(guest + done + participant);
+		if (!guest && !participant)
+		{
+			document.getElementById("enter").style.display = "block";
+		}
+		if (!guest && done)
+		{
+			document.querySelector(".container").style.display = "block";
+		}
+
 		document.getElementById('enter').addEventListener('click', function() {
 			<?php
 				if (!$guest)
