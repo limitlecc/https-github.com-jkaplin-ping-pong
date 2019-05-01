@@ -130,7 +130,7 @@
 		{
 			document.getElementById("enter").style.display = "block";
 		}
-		if (!guest && done)
+		if (!guest && !done)
 		{
 			document.querySelector(".container").style.display = "block";
 		}
