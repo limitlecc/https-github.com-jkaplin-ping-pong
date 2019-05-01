@@ -103,7 +103,7 @@
 	</div>
 	<script>
 		let guest = <?php echo $guest; ?>;
-		let done = <?php echo $done; ?>;
+		let done = '<?php echo $done; ?>';
 		let participant = <?php echo $participant ?>;
 
 		window.alert(done);
