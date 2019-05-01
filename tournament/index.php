@@ -25,8 +25,6 @@
 		$op_intra = "jkaplin";
 	}
 	$participants = getParticipants();
-	$names = getNames();
-	$images = getImages();
 	$participant = 0;
 
 
@@ -75,8 +73,7 @@
 			<?php for($i = 0; $i < count($participants); $i++) { ?>
 				<div>
 					<br>
-					<?php echo "$participants[$i] ($names[$i])"; ?>
-					<img src="<?php echo $images[$i]; ?>" />
+					<?php echo $participants[$i]; ?>
 					<?php
 						if ($participants[$i] == $intra)
 							$participant = 1;
@@ -130,12 +127,11 @@
 			}
 		};
 
-
 		document.onload = begin();
 		document.getElementById('enter').addEventListener('click', function() {
 			<?php
 				if (!$guest && !$participant)
-					addParticipant($intra, $name, $img);
+					addParticipant($intra);
 			?>
 		});
 

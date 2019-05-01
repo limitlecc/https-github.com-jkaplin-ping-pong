@@ -8,15 +8,13 @@ $c->verify_ssl = false;
 
 $tournament_id = 5931277;
 
-function addParticipant($intra, $name, $img)
+function addParticipant($intra)
 {
 	$c = $GLOBALS['c'];
 	$tournament_id = $GLOBALS['tournament_id'];	
 
 	$params = array(
-  	"participant[name]" => $intra,
-  	"participant[display_name_with_invitation_email_address]" => $name,
-  	"participant[icon]" => $img
+  	"participant[name]" => $intra
 	);
 	$participant = $c->createParticipant($tournament_id, $params);
 }
