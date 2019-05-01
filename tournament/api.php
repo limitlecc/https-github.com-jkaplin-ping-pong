@@ -15,7 +15,7 @@ function addParticipant($intra, $name, $img)
 
 	$params = array(
   	"participant[name]" => $intra,
-  	"participant[username]" => $name,
+  	"participant[display_name_with_invitation_email_address]" => $name,
   	"participant[icon]" => $img
 	);
 	$participant = $c->createParticipant($tournament_id, $params);
@@ -48,7 +48,7 @@ function getNames()
 
 	for ($i = 0; $i < count($participants->participant); $i++)
 	{
-		$arr[] = $participants->participant[$i]->username;
+		$arr[] = $participants->participant[$i]->{"display-name-with-invitation-email-address"};
 	}
 	return ($arr);
 }
