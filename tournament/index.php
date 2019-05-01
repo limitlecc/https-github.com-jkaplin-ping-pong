@@ -111,6 +111,7 @@
 			let guest = <?php echo $guest; ?>;
 			let done = <?php echo $done; ?>;
 			let participant = <?php echo $participant ?>;
+			console.log(guest + done + participant);
 			if (!guest && !participant)
 			{
 				document.getElementById("enter").style.display = "block";
