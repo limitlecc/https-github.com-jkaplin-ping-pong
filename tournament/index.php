@@ -29,16 +29,6 @@
 	$participant = 0;
 
 
-	
-	if (isset($_POST["submit"]) && $_POST["submit"] === "OK")
-	{
-		$submitted = 1;
-		$intra_name = $_POST["p1"];
-		$score = $_POST["p1_score"];
-		$op_score = $_POST["p2_score"];
-		updateMatchScore($intra_name, $score, $op_score);
-		unset ($_POST["submit"]);
-	}
 
 ?>
 
@@ -86,7 +76,7 @@
 		</div>
 	</div>
 
-	<form action="http://ft-ping-pong.herokuapp.com/tournament/" method="post">
+	<form action="http://ft-ping-pong.herokuapp.com/tournament/submit.php" method="post">
 		<button id="enter">Enter The Tournament</button>
 	</form>
 
