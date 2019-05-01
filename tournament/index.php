@@ -118,10 +118,12 @@
 		document.getElementById('enter').addEventListener('click', function() {
 			<?php
 				if (!$guest && !$participant)
-				{
-					addParticipant($intra, $img); ?>
-					document.querySelector(".container").style.display = "none";
-	<?php } ?>
+					addParticipant($intra, $img);
+			?>
+		});
+
+		document.getElementById('form').addEventListener('submit', function() {
+			document.querySelector(".container").style.display = "none";
 		});
 	</script>
 </body>
