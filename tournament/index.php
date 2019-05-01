@@ -2,6 +2,7 @@
 	session_start();
 	include_once("api.php");
 
+	$submitted = 0;
 	if (isset($_SESSION["user"]))
 	{
 		$guest = 0;
@@ -31,11 +32,11 @@
 	
 	if (isset($_POST["submit"]) && $_POST["submit"] === "OK")
 	{
+		$submitted = 1;
 		$intra_name = $_POST["p1"];
 		$score = $_POST["p1_score"];
 		$op_score = $_POST["p2_score"];
 		updateMatchScore($intra_name, $score, $op_score);
-		header("refresh: 0");
 	}
 
 ?>
@@ -117,12 +118,13 @@
 			let guest = <?php echo $guest; ?>;
 			let open = '<?php echo $open; ?>';
 			let participant = <?php echo $participant ?>;
+			let submitted = <?php echo $submitted; ?>;
 
 			if (!guest && !participant)
 			{
 				document.getElementById("enter").style.display = "block";
 			}
-			if (!guest && open)
+			if (!guest && open && !submitted)
 			{
 				document.querySelector(".container").style.display = "block";
 			}
