@@ -8,5 +8,6 @@
 		$op_score = $_POST["p2_score"];
 		updateMatchScore($intra_name, $score, $op_score);
 	}
-	header("Location: http://ft-ping-pong.herokuapp.com/tournament/");
+	//header("Location: http://ft-ping-pong.herokuapp.com/tournament/");
+	//exit;
 ?>
