@@ -10,7 +10,7 @@
 		$name = $user->displayname;
 		$img = $user->image_url;
 		$op_intra = getOpponent($intra);
-		if (isset($_SESSION["open"]) && $_SESSION["open"] === "close")
+		if (!$op_intra || (isset($_SESSION["open"]) && $_SESSION["open"] === "close"))
 			$open = 0;
 		else
 			$open = getMatch($intra);
