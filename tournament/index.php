@@ -10,7 +10,7 @@
 		$name = $user->displayname;
 		$img = $user->image_url;
 		$op_intra = getOpponent($intra);
-		$done = getMatch($intra);
+		$open = getMatch($intra);
 	}
 	else
 	{
@@ -18,7 +18,8 @@
 		$intra = "";
 		$name = "";
 		$img = "guest.jpg";
-		$done = 1;
+		$open = 0;
+		$op_intra = "jkaplin";
 	}
 	$participants = getParticipants();
 	$participant = 0;
@@ -83,7 +84,6 @@
 	<div class="container">  
 		<form id="form" action="http://ft-ping-pong.herokuapp.com/tournament/" method="post">
 			<h3>Submit the Match Score</h3>
-			<h4>Each player has to submit one form</h4>
 			<fieldset>
 				<input name="p1" value="<?php echo $intra;?>" type="text" required autofocus readonly>
 			</fieldset>
@@ -103,16 +103,14 @@
 	</div>
 	<script>
 		let guest = <?php echo $guest; ?>;
-		let done = '<?php echo $done; ?>';
+		let open = '<?php echo $open; ?>';
 		let participant = <?php echo $participant ?>;
-
-		window.alert(done);
 
 		if (!guest && !participant)
 		{
 			document.getElementById("enter").style.display = "block";
 		}
-		if (!guest && !done)
+		if (!guest && open)
 		{
 			document.querySelector(".container").style.display = "block";
 		}
