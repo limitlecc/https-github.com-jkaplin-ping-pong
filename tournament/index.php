@@ -76,8 +76,8 @@
 		</div>
 	</div>
 
-	<form action="http://ft-ping-pong.herokuapp.com/tournament/" method="post">
-		<button id="enter">Enter The Tournament</button>
+	<form action="http://ft-ping-pong.herokuapp.com/tournament/add.php" method="post">
+		<button id="enter" name="enter" value="<?php echo $intra; ?>">Enter The Tournament</button>
 	</form>
 
 <!--	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
@@ -122,16 +122,6 @@
 		};
 
 		document.onload = begin();
-		document.getElementById('enter').addEventListener('click', function() {
-			<?php
-				if (!$guest && !$participant)
-					addParticipant($intra);
-			?>
-		});
-
-		document.getElementById('form').addEventListener('submit', function() {
-			document.querySelector(".container").style.display = "none";
-		});
 	</script>
 </body>
 
