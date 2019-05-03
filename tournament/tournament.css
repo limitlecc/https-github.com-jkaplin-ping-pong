@@ -20,15 +20,26 @@ h1 {
 	margin: 50px;
 }
 
-h2 {
+
+#wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+#message {
 	color: orange;
-	font-size: 50px;
+	font-size: 25px;
 	margin: 25px;
 	border: 1px solid orange;
-	padding: 100px;
+	padding: 50px;
+	line-height: 50pt;
 	border-radius: 10px;
-	width: 95%;
 	text-align: center;
+	height: 10%;
+}
+
+h2 {
 }
 
 #enter {
@@ -95,7 +106,6 @@ body {
 .container {
   max-width: 750px;
   width: 100%;
-  margin: 0 auto;
   position: relative;
   display: none;
 }
@@ -109,8 +119,10 @@ body {
 #form {
   background: white;
   padding: 25px;
-  margin: 150px 0;
+  margin: 25px 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+  line-height: 50pt;
 }
 
 #form h3 {
@@ -162,7 +174,7 @@ fieldset {
 
 #form {
 	display: grid;
-	grid-template-columns: 40% 40%;
+	grid-template-columns: 40% 60%;
 }
 
 #form h3 {

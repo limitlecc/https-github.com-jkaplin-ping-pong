@@ -20,7 +20,7 @@
 	{
 		$guest = 1;
 		$intra = "";
-		$name = "";
+		$name = "Guest";
 		$img = "guest.jpg";
 		$open = 0;
 		$op_intra = "jkaplin";
@@ -47,23 +47,52 @@
 <body>
 	<h1>ft_ping-pong</h1>
 	<br>
-	<h2>
-		<?php
-			echo "Hello $name!";
-		?>
-			<br>
-			<br>
-		<?php
-			echo "- Welcome to the club (:";
-		?>
-	</h2>
+<div id="wrapper">
+	<div id="message">
+		<h2>
+			<?php
+				echo "Hello $name";
+			?>
+				<br>
+				<br>
+			<?php
+				//echo "- Welcome to the tournament";
+			?>
+		</h2>
+	</div>
 
+	<div class="container">  
+		<form id="form" action="http://ft-ping-pong.herokuapp.com/tournament/submit.php" method="post">
+			<h3>Submit the Match Score</h3>
+			<fieldset>
+				<input name="p1" value="<?php echo $intra;?>" type="text" required autofocus readonly>
+			</fieldset>
+			<fieldset>
+				<input name="p1_score" placeholder="Your Score" type="number" min="0" required>
+			</fieldset>
+			<fieldset>
+				<input name="p2" value="<?php echo $op_intra;?>" type="text" required autofocus readonly>
+			</fieldset>
+			<fieldset>
+				<input name="p2_score" placeholder="Opponent Score" type="number" min="0"required>
+			</fieldset>
+			<fieldset>
+				<button name="submit" value="OK" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+
+
+<!--
 	<div id="participants">
 	<div id="number"></div>
 		<u>Tournament Participants</u>
 		<br>
 		<div id="count">
-			<?php for($i = 0; $i < count($participants); $i++) { ?>
+			<?php /* 
+				for($i = 0; $i < count($participants); $i++) { ?>
 				<div>
 					<br>
 					<?php echo $participants[$i]; ?>
@@ -72,39 +101,21 @@
 							$participant = 1;
 					?>
 				</div>
-			<?php } ?>
+			<?php } 
+						*/ ?>
 		</div>
 	</div>
-
+-->
+<!--
 	<form action="http://ft-ping-pong.herokuapp.com/tournament/add.php" method="post">
-		<button id="enter" name="enter" value="<?php echo $intra; ?>">Enter The Tournament</button>
+		<button id="enter" name="enter" value="<?php /* echo $intra; */ ?>">Enter The Tournament</button>
 	</form>
-
-<!--	<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
-	<div class="container">  
-		<form id="form" action="http://ft-ping-pong.herokuapp.com/tournament/submit.php" method="post">
-			<h3>Submit the Match Score</h3>
-			<fieldset>
-				<input name="p1" value="<?php echo $intra;?>" type="text" required autofocus readonly>
-			</fieldset>
-			<fieldset>
-				<input name="p1_score" placeholder="Your Score" type="number" min="0" max="21" required>
-			</fieldset>
-			<fieldset>
-				<input name="p2" value="<?php echo $op_intra;?>" type="text" required autofocus readonly>
-			</fieldset>
-			<fieldset>
-				<input name="p2_score" placeholder="Opponent Score" type="number" min="0" max="21" required>
-			</fieldset>
-			<fieldset>
-				<button name="submit" value="OK" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-			</fieldset>
-		</form>
-	</div>
+-->
+<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="50%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 	<script>
 		function begin() {
-			let num = document.getElementById("count").children.length;
-			document.getElementById("number").innerHTML = num;
+			//let num = document.getElementById("count").children.length;
+			//document.getElementById("number").innerHTML = num;
 
 			let guest = <?php echo $guest; ?>;
 			let open = '<?php echo $open; ?>';
@@ -115,7 +126,8 @@
 			{
 				document.getElementById("enter").style.display = "block";
 			}
-			if (!guest && open && !submitted)
+			//if (!guest && open && !submitted)
+			if (true)
 			{
 				document.querySelector(".container").style.display = "block";
 			}
