@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ft_ping-pong</title>
+  <link href="https://assets.challonge.com/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link rel="stylesheet" href="practice.css" />
+	<script type="text/javascript" src="pong.js"></script>
+</head>
+
+<body>
+
+	<audio id="menu-select-1" src="audio/menu-select-1.wav" preload="auto"></audio>
+
+	<audio id="menu-select-2" src="audio/menu-select-2.wav" preload="auto"></audio>
+
+	<audio id="menu-success" src="audio/menu-success.wav" preload="auto"></audio>
+
+	<audio id="menu-failure" src="audio/menu-failure.wav" preload="auto"></audio>
+
+	<audio id="menu-link" src="audio/menu-link.mp3" preload="auto"></audio>
+
+	<audio id="menu-mouseover" src="audio/menu-mouseover.wav" preload="auto"></audio>
+
+	<canvas></canvas>
+
+	<div id="line" class="mute"></div>
+	<canvas id="speaker"></canvas>
+
+	<script type="text/javascript">
+		document.onload = drawSpeaker();
+		document.addEventListener("click", playClickSound);
+		document.addEventListener("mouseover", playHoverSound);
+		document.getElementById("speaker").addEventListener("click", toggleMusic);
+		document.getElementById("line").addEventListener("click", toggleMusic);
+		document.getElementById("speaker").addEventListener("mouseover", toggleLine);
+		document.getElementById("speaker").addEventListener("mouseleave", toggleLine);
+		document.getElementById("login-button").addEventListener("click", toggleModal);
+		document.getElementById("credits-button").addEventListener("click", toggleModal);
+	</script>
+</body>
+
+</html>
