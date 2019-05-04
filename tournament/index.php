@@ -91,26 +91,26 @@
 		<u>Tournament Participants</u>
 		<br>
 		<div id="count">
-			<?php /* 
+			<?php
 				for($i = 0; $i < count($participants); $i++) { ?>
 				<div>
 					<br>
-					<?php echo $participants[$i]; ?>
+					<?php// echo $participants[$i]; ?>
 					<?php
 						if ($participants[$i] == $intra)
 							$participant = 1;
 					?>
 				</div>
 			<?php } 
-						*/ ?>
+		 ?>
 		</div>
 	</div>
--->
+	-->
 <!--
 	<form action="http://ft-ping-pong.herokuapp.com/tournament/add.php" method="post">
 		<button id="enter" name="enter" value="<?php /* echo $intra; */ ?>">Enter The Tournament</button>
 	</form>
---><iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="70%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+--><iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 	<script>
 		function begin() {
 			//let num = document.getElementById("count").children.length;
