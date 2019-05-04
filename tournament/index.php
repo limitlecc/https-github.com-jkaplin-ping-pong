@@ -126,8 +126,7 @@
 			{
 				document.getElementById("enter").style.display = "block";
 			}
-			//if (!guest && open && !submitted)
-			if (true)
+			if (!guest && open && !submitted)
 			{
 				document.querySelector(".container").style.display = "block";
 			}
