@@ -48,7 +48,6 @@
 	<h1>ft_ping-pong</h1>
 	<br>
 <div id="wrapper">
-<!--
 	<div id="message">
 		<h2>
 			<?php
@@ -61,7 +60,6 @@
 			?>
 		</h2>
 	</div>
-	-->
 
 	<div class="container">  
 		<form id="form" action="http://ft-ping-pong.herokuapp.com/tournament/submit.php" method="post">
@@ -128,7 +126,6 @@
 				document.getElementById("enter").style.display = "block";
 			}
 			if (!guest && open && !submitted)
-			{
 				document.querySelector(".container").style.display = "block";
 			}
 		};
