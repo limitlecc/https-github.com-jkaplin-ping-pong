@@ -110,7 +110,8 @@
 	<form action="http://ft-ping-pong.herokuapp.com/tournament/add.php" method="post">
 		<button id="enter" name="enter" value="<?php /* echo $intra; */ ?>">Enter The Tournament</button>
 	</form>
---><iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+-->
+<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 	<script>
 		function begin() {
 			//let num = document.getElementById("count").children.length;
@@ -125,7 +126,9 @@
 			{
 				document.getElementById("enter").style.display = "block";
 			}
-			if (!guest && open && !submitted)
+			//if (!guest && open && !submitted)
+			if (true)
+			{
 				document.querySelector(".container").style.display = "block";
 			}
 		};
