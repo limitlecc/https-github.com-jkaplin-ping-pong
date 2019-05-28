@@ -7,6 +7,6 @@
 		addParticipant($intra);
 	}
 
-	header("Location: http://ft-ping-pong.herokuapp.com/tournament/");
+	header("Location: http://ft-chess.herokuapp.com/tournament/");
 	exit;
 ?>
