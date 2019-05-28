@@ -8,6 +8,12 @@ $c->verify_ssl = false;
 
 $tournament_id = 5931277;
 
+function getMyTournaments()
+{
+	$tournaments = $c->getTournaments();
+	return ($tournaments);
+}
+
 function addParticipant($intra)
 {
 	$c = $GLOBALS['c'];
