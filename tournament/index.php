@@ -23,7 +23,7 @@
 		$name = "Guest";
 		$img = "guest.jpg";
 		$open = 0;
-		$op_intra = "jkaplin";
+		$op_intra = "defraim";
 	}
 	$participants = getParticipants();
 	$participant = 0;
@@ -39,7 +39,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ft_ping-pong</title>
+  <title>ft_chess</title>
   <link href="https://assets.challonge.com/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
   <link rel="stylesheet" href="tournament.css" />
 </head>
@@ -56,13 +56,13 @@
 				<br>
 				<br>
 			<?php
-				//echo "- Welcome to the tournament";
+				 "- Welcome to the tournament";
 			?>
 		</h2>
 	</div>
 
 	<div class="container">  
-		<form id="form" action="http://ft-ping-pong.herokuapp.com/tournament/submit.php" method="post">
+		<form id="form" action="http://ft-chess.herokuapp.com/tournament/submit.php" method="post">
 			<h3>Submit the Match Score</h3>
 			<fieldset>
 				<input name="p1" value="<?php echo $intra;?>" type="text" required autofocus readonly>
@@ -85,7 +85,6 @@
 
 
 
-<!--
 	<div id="participants">
 	<div id="number"></div>
 		<u>Tournament Participants</u>
@@ -105,13 +104,12 @@
 		 ?>
 		</div>
 	</div>
-	-->
-<!--
-	<form action="http://ft-ping-pong.herokuapp.com/tournament/add.php" method="post">
-		<button id="enter" name="enter" value="<?php /* echo $intra; */ ?>">Enter The Tournament</button>
+
+	<form action="http://ft-chess.herokuapp.com/tournament/add.php" method="post">
+		<button id="enter" name="enter" value="<?php echo $intra ?>">Enter The Tournament</button>
 	</form>
--->
-<iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+
+<!-- <iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 	<script>
 		function begin() {
 			//let num = document.getElementById("count").children.length;
@@ -137,3 +135,4 @@
 </body>
 
 </html>
+--!>
