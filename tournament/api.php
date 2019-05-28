@@ -2,7 +2,7 @@
 
 include('challonge.class.php');
 
-$c = new ChallongeAPI("fKYhLuDW5EbWKhLgSsgGaRRar6qbNMuwrbGxyCJS");
+$c = new ChallongeAPI("v1L8yRoOJOn3d3j5XFdy3r1RrKOCe07wrBECvWwf");
 
 $c->verify_ssl = false;
 
