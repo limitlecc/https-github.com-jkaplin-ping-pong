@@ -62,7 +62,7 @@
 	</div>
 
 	<div class="container">  
-		<form id="form" action="http://ft-chess.herokuapp.com/tournament/submit.php" method="post">
+		<form id="form" action="https://chess-matches.herokuapp.com/tournament/submit.php" method="post">
 			<h3>Submit the Match Score</h3>
 			<fieldset>
 				<input name="p1" value="<?php echo $intra;?>" type="text" required autofocus readonly>
@@ -105,7 +105,7 @@
 		</div>
 	</div>
 
-	<form action="http://ft-chess.herokuapp.com/tournament/add.php" method="post">
+	<form action="http://chess-matches.herokuapp.com/tournament/add.php" method="post">
 		<button id="enter" name="enter" value="<?php echo $intra ?>">Enter The Tournament</button>
 	</form>
 
