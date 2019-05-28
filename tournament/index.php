@@ -1,4 +1,6 @@
 <?php
+
+
 	session_start();
 	include_once("api.php");
 
@@ -45,6 +47,7 @@
 </head>
 
 <body>
+
 	<h1>ft_chess</h1>
 	<br>
 <div id="wrapper">
@@ -52,6 +55,7 @@
 		<h2>
 			<?php
 				echo "Hello $name";
+				var_dump(getMyTournaments());
 			?>
 				<br>
 				<br>
