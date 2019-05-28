@@ -45,7 +45,7 @@
 </head>
 
 <body>
-	<h1>ft_ping-pong</h1>
+	<h1>ft_chess</h1>
 	<br>
 <div id="wrapper">
 	<div id="message">
