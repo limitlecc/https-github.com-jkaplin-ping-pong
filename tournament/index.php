@@ -55,7 +55,6 @@
 		<h2>
 			<?php
 				echo "Hello $name";
-				var_dump(getMyTournaments());
 			?>
 				<br>
 				<br>
