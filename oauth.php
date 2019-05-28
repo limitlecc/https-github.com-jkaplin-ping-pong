@@ -18,5 +18,5 @@
 	var_dump($obj->login);
 	var_dump($obj->first_name);
 	var_dump($obj->last_name);
-	header('Location: https://ft-chess.herokuapp.com/tournament');
+	header('Location: https://chess-matches.herokuapp.com/tournament');
 ?>
