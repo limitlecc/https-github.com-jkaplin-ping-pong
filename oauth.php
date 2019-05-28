@@ -4,10 +4,10 @@
 	$code = $_GET["code"];
 
 	exec("curl -F grant_type=authorization_code \
-			-F client_id=511d20aaebf083f243087bc461886b5d79bd862e029d400e9870fa7d1982c6b6 \
-			-F client_secret=ee8726114499258fa121e7e0c78c643f887429b598c8ff9af5121e496ebfa2fa \
+			-F client_id=bca228b966922e62a5acf60e899a861b4b99d863a0a6f8c1e7401a23448f7983 \
+			-F client_secret=9f01ac217366138e54dd6e44168ee088fc5e5cdd9f949126967f59e87d27a3aa \
 			-F code=$code \
-			-F redirect_uri=https://ft-chess.herokuapp.com/oauth.php \
+			-F redirect_uri=https://chess-matches.herokuapp.com/oauth.php \
 			-X POST https://api.intra.42.fr/oauth/token",$arr);
 	$obj = json_decode($arr[0]);
 	$access_token = $obj->access_token;
