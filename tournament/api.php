@@ -6,7 +6,7 @@ $c = new ChallongeAPI("v1L8yRoOJOn3d3j5XFdy3r1RrKOCe07wrBECvWwf");
 
 $c->verify_ssl = false;
 
-$tournament_id = 5931277;
+$tournament_id = 6332890;
 
 function getMyTournaments()
 {
