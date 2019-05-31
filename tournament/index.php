@@ -112,11 +112,11 @@
 		<button id="enter" name="enter" value="<?php echo $intra ?>">Enter The Tournament</button>
 	</form>
 
-<!-- <iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<!-- <iframe src="https://challonge.com/m5u4u1c4/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
 	<script>
 		function begin() {
-			//let num = document.getElementById("count").children.length;
-			//document.getElementById("number").innerHTML = num;
+			let num = document.getElementById("count").children.length;
+			document.getElementById("number").innerHTML = num;
 
 			let guest = <?php echo $guest; ?>;
 			let open = '<?php echo $open; ?>';
@@ -138,4 +138,3 @@
 </body>
 
 </html>
--->
