@@ -97,7 +97,7 @@
 				for($i = 0; $i < count($participants); $i++) { ?>
 				<div>
 					<br>
-					<?php// echo $participants[$i]; ?>
+					<?php echo $participants[$i]; ?>
 					<?php
 						if ($participants[$i] == $intra)
 							$participant = 1;
