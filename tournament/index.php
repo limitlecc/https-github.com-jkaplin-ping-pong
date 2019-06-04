@@ -112,8 +112,8 @@
 		<button id="enter" name="enter" value="<?php echo $intra ?>">Enter The Tournament</button>
 	</form>
 
-<!-- <iframe src="https://challonge.com/gmcjehqq/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe> -->
-	<script>
+<iframe src="https://challonge.com/gmcjehqq/module?multiplier=2" width="100%" height="60%" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+	<!--<script>
 		function begin() {
 			let num = document.getElementById("count").children.length;
 			document.getElementById("number").innerHTML = num;
@@ -134,7 +134,7 @@
 		};
 
 		document.onload = begin();
-	</script>
+	</script> -->
 </body>
 
 </html>
